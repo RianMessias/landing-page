@@ -1,0 +1,443 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #090c11;
+    /* Fundo escuro */
+    color: #EAEAEA;
+    /* Texto claro */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    /* Espaço para a navbar */
+}
+
+
+h1,
+h2,
+p {
+    margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #090c11;
+    /* Fundo escuro */
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #EAEAEA;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #FD1436;
+    /* Destaque ao passar o mouse */
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    /* A linha cresce ao passar o mouse */
+}
+
+.nav-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FD1436;
+    /* Linha de destaque */
+    transition: width 0.3s;
+    margin: 5px auto 0 auto;
+}
+
+.nav-menu a.active {
+    color: #FD1436;
+    border-bottom: 2px solid #FD1436;
+}
+
+/* Seções */
+section {
+    padding: 120px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Reduzi o tempo da transição */
+    will-change: opacity, transform;
+    /* Informa ao navegador sobre as mudanças */
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sobre Mim */
+#Sobre-Mim h1 {
+    font-size: 2.5rem;
+    color: #FD1436;
+    /* Cor de destaque */
+}
+
+#Sobre-Mim img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Habilidades */
+#Habilidades h1 {
+    font-size: 2rem;
+    color: #FD1436;
+    /* Cor de destaque */
+}
+
+/* Projetos */
+#Trabalhos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens "quebrem" para a próxima linha */
+    justify-content: space-between;
+    /* Espaçamento uniforme entre os itens */
+    gap: 20px;
+    /* Espaço fixo entre os projetos */
+    padding: 20px;
+}
+
+#Trabalhos h1 {
+    font-size: 2.5rem;
+    color: #FD1436;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+    /* Transição de título de projeto mais leve */
+}
+
+/* Seção Projetos */
+#Trabalhos {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os projetos de forma vertical */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    /* Centraliza o título e os projetos */
+}
+
+#Trabalhos h1 {
+    font-size: 2.5rem;
+    /* Tamanho maior para o título */
+    color: #FD1436;
+    /* Cor de destaque */
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+}
+
+#Minimalista {
+    border-radius: 50%;
+    /* Faz a borda da imagem circular */
+    width: 150px;
+    /* Ajuste o tamanho da imagem */
+    height: 150px;
+    /* Ajuste o tamanho da imagem */
+    object-fit: cover;
+    /* Faz a imagem cobrir todo o espaço sem distorcer */
+}
+
+
+
+.projeto {
+    background: #1A1F26;
+    border-radius: 12px;
+    /* Bordas arredondadas */
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    /* Divide os projetos em 3 por linha */
+    max-width: calc(33.333% - 40px);
+    /* Largura máxima para alinhamento */
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    /* Espaço entre os projetos */
+}
+
+.projeto img {
+    width: 50%;
+    /* Ajusta o tamanho da imagem */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    margin-bottom: 15px;
+}
+
+#Projetos h1 {
+    color: red;
+    /* Define a cor vermelha para o título */
+}
+
+.projeto h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.projeto a {
+    color: #FD1436;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+    /* Efeito ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Container de projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    opacity: 20;
+    transition: opacity 0.2s ease;
+    /* Animação suave */
+}
+
+.projetos-container.show {
+    opacity: 1;
+}
+
+.projeto {
+    background: #1A1F26;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+    /* Cada projeto ocupa 50% da largura */
+    max-width: calc(50% - 20px);
+    /* Limita a largura máxima */
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .projeto {
+        flex: 1 1 calc(100% - 20px);
+        /* Em telas menores, os projetos ocupam 100% da largura */
+        max-width: 100%;
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .projeto {
+        flex: 1 1 calc(50% - 40px);
+        /* Dois projetos por linha */
+        max-width: calc(50% - 40px);
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .projeto {
+        flex: 1 1 100%;
+        /* Um projeto por linha */
+        max-width: 100%;
+    }
+}
+
+/* Contato */
+#Contato h1 {
+    color: #FD1436;
+}
+
+/* Estilo base dos ícones */
+#icons {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#icons:hover {
+    transform: scale(1.2);
+    /* Aumenta o tamanho */
+    filter: drop-shadow(0 0 10px #ff0000);
+    /* Adiciona um brilho vermelho */
+}
+
+/* Alinhar os ícones */
+#Sobre-Mim a {
+    display: inline-block;
+}
+
+.icons {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icons:hover {
+    transform: scale(1.2);
+    color: #755555;
+    /* Ajuste a cor que desejar */
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.imagem-container img {
+    width: 80px;
+    /* Ajuste o tamanho conforme necessário */
+    transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.imagem-container img:hover {
+    transform: scale(1.2) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Formulários */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #1A1F26;
+    color: #EAEAEA;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #FD1436;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #090c11;
+    color: #CCCCCC;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    min-height: 60px;
+    /* Garante que o rodapé tenha altura suficiente */
+}
+
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    /* Bordas arredondadas */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    /* Cor do WhatsApp ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa */
+}
+
+.whatsapp-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.whatsapp-btn span {
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+}
+
+
+/* Experiência */
+#Experiencia {
+    background: #1A1F26;
+    color: #EAEAEA;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#Experiencia h1 {
+    font-size: 2.5rem;
+    color: #FD1436;
+    margin-bottom: 20px;
+}
+
+.contador-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contador-item {
+    text-align: center;
+    margin: 20px;
+    flex: 1 1 200px;
+}
+
+.contador-item h2 {
+    font-size: 3rem;
+    color: #FD1436;
+}
+
+.contador-item p {
+    font-size: 1.2rem;
+}

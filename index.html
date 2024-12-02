@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Rian Messias - Desenvolvedor Web">
+        <meta property="og:description" content="Criação de sites modernos e funcionais.">
+        <title>Rian Messias</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
+
+    <body>
+        <header class="navbar">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#Sobre-Mim">Sobre Mim</a></li>
+                    <li><a href="#Experiencia">Experiência</a></li>
+                    <li><a href="#Habilidades">Habilidades</a></li>
+                    <li><a href="#Projetos">Projetos</a></li>
+                    <li><a href="#Contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="Sobre-Mim" class="animate">
+                <h2></h2>
+                <img src="imagens/perfil.png" alt="Imagem ilustrativa" id="Minimalista">
+                <h1>Sou especialista em criação de Sites.</h1>
+                <p>Sou o Rian, tenho 22 anos e sou especialista na criação de sites modernos, funcionais e adaptados às
+                    necessidades de cada cliente. Com experiência no ramo há 2 anos, mas minha paixão por computadores e
+                    tecnologia vem desde a infância. Minha missão é transformar ideias em plataformas digitais com foco
+                    em usabilidade, combinando design atraente com desempenho otimizado. Trabalho com tecnologias de
+                    ponta, garantindo que cada projeto seja não apenas bonito, mas também eficiente e acessível.</p>
+                <div id="social-icons">
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="imagens/linkedin-icon.png" alt="LinkedIn" id="icons">
+                    </a>
+                    <a href="https://github.com/RianMessias" target="_blank">
+                        <img src="imagens/github-icon.png" alt="GitHub" id="icons">
+                    </a>
+                </div>
+            </section>
+            <section id="Experiencia" class="animate">
+                <h1>Minha Experiência</h1>
+                <div class="contador-container">
+                    <div class="contador-item">
+                        <h2 id="projetos-concluidos" data-target="12">0</h2>
+                        <p>Projetos Concluídos</p>
+                    </div>
+                    <div class="contador-item">
+                        <h2 id="horas-desenvolvimento" data-target="128">0</h2>
+                        <p>Horas de Desenvolvimento</p>
+                    </div>
+                    <div class="contador-item">
+                        <h2 id="anos-experiencia" data-target="2">0</h2>
+                        <p>Anos de Experiência</p>
+                    </div>
+                </div>
+            </section>
+            <section id="Habilidades" class="animate">
+                <h1>Principais Habilidades</h1>
+                <div class="imagem-container">
+                    <div class="habilidade">
+                        <img src="imagens/html.png" alt="HTML">
+                        <p>Criação de estruturas de sites semânticas e acessíveis.</p>
+                    </div>
+                    <div class="habilidade">
+                        <img src="imagens/css.png" alt="CSS">
+                        <p>Estilização avançada de layouts responsivos e modernos.</p>
+                    </div>
+                    <div class="habilidade">
+                        <img src="imagens/js.png" alt="JavaScript">
+                        <p>Desenvolvimento de interatividade e manipulação dinâmica de conteúdo.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="Projetos" class="animate">
+                <h1>Projetos</h1>
+                <div class="projetos-container">
+                    <!-- Primeiro projeto -->
+                    <div class="projeto">
+                        <img src="imagens/projeto1.png" alt="Projeto 1" loading="lazy">
+                        <h3>Projeto 1</h3>
+                        <p>Desenvolvimento de um site responsivo e moderno para exibir o portfólio de um profissional.
+                        </p>
+                        <a href="#">Ver mais</a>
+                    </div>
+
+                    <!-- Segundo projeto -->
+                    <div class="projeto">
+                        <img src="imagens/projeto2.png" alt="Projeto 2" loading="lazy">
+                        <h3>Projeto 2</h3>
+                        <p>Desenvolvimento de uma plataforma interativa com funcionalidades personalizadas para um
+                            cliente específico.</p>
+                        <a href="#">Ver mais</a>
+                    </div>
+                </div>
+            </section>
+            <section id="Contato" class="animate">
+                <h1>Entre em Contato</h1>
+                <form action="send_email.php" method="POST">
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                    <textarea name="message" placeholder="Sua Mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <a href="https://wa.me/5511967064125" target="_blank" class="whatsapp-btn">
+                    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+                    <span>Chat no WhatsApp</span>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Rian Messias Alves. Todos os direitos reservados.</p>
+        </footer>
+    </body>
+
+</html>
